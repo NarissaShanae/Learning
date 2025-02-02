@@ -1,0 +1,238 @@
+/* STYLES FOR ABOVE THE FOLD */
+@media only screen and (min-width: 0rem) {
+  span.one {
+    color: var(--secondary);
+  }
+  span.two {
+    color: var(--secondary);
+    font-style: italic;
+  }
+  span.three {
+    color: var(--secondary);
+    font-weight: 900;
+  }
+}
+/*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-856 {
+    /* centers button */
+    text-align: center;
+    /* 116px - 164px top */
+    /* 60px - 100px  bottom */
+    padding: clamp(7.25rem, 16.82vw, 10.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+    /* clips the svg wave from overflowing */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding-top: 11rem;
+    padding-bottom: 2rem;
+  }
+  #hero-856 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  #hero-856 .cs-content {
+    max-width: 39.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  #hero-856 .cs-topper {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--bodyTextColor);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #hero-856 .cs-title {
+    /* 39px - 61px */
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    /* 23 characters including spaces wide */
+    max-width: 18rem;
+    margin: 0 0 1rem 0;
+    color: var(--bodyTextColor);
+    position: relative;
+    text-transform: capitalize;
+    font-family: "Inter";
+  }
+  #hero-856 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    max-width: 18rem;
+    /* 28px - 40px */
+    margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+    color: var(--bodyTextColor);
+  }
+  #hero-856 .cs-image-group {
+    /* font size scaling. Everything inside the group is in ems so they pull their value for em from the parent (this group div) and when the font is set to a vw, it scales the whole section down and grows proportionally with the screen width, stopping at the final em value declared in the second slot for the min function. */
+    font-size: min(2.25vw, .83em);
+    width: 40.75em;
+    min-height: 45em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #hero-856 .cs-picture {
+    width: 90%;
+    height: 24.875rem;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 6%;
+  }
+  #hero-856 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #hero-856 .cs-picture1 {
+    position: absolute;
+    display: block;
+    height: 39.75em;
+    /* using ems so we can use font size to scale the whole section */
+    max-width: 37.5em;
+    top: 0;
+    right: 0;
+    border-radius: 15.625em;
+    border: 0.625em solid var(--primary);
+    background-color: #FFD3C6;
+    /* clips img tag corners */
+    overflow: hidden;
+  }
+  #hero-856 .cs-picture1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #hero-856 {
+    text-align: right;
+    padding: clamp(5.25rem, 10.82vw, 10.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+    padding-bottom: 2rem;
+  }
+  #hero-856 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block-end: 0rem;
+    margin-top: 2rem;
+  }
+  #hero-856 .cs-content {
+    width: 45vw;
+    /* prevents flex-box from squishing it */
+    flex: none;
+    align-items: flex-start;
+    /* sends it to the right in the 2nd position */
+    /*order: 2;*/
+  }
+  #hero-856 .cs-topper {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+  }
+  #hero-856 .cs-title {
+    font-size: 4rem;
+    text-align: left;
+    max-width: 35rem;
+    margin-left: 2rem;
+  }
+  #hero-856 .cs-text {
+    text-align: left;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    max-width: 29rem;
+    margin-left: 2rem;
+  }
+  #hero-856 .cs-picture {
+    /* 623px - 814px */
+    height: 39.875rem;
+    width: 90%;
+    /* 100px - 200px */
+  }
+  #hero-856 .cs-picture img {
+    left: 0;
+  }
+  #hero-856 .cs-button-solid {
+    margin-left: 2rem;
+  }
+  #hero-856 .cs-hills {
+    top: 65%;
+    bottom: auto;
+    min-width: 120rem;
+    margin-top: 9rem;
+    z-index: 2;
+  }
+  #hero-856 .cs-background-picture {
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    /* Background Image */
+    width: 100%;
+  }
+  #hero-856 .cs-background-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes image act like a background-image */
+    object-fit: cover;
+  }
+  #hero-856 .cs-background-picture:before {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Black Color Overlay */
+    content: "";
+    opacity: 0.7;
+    display: block;
+    background: none;
+    height: 100%;
+    width: 100%;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-856 {
+    background-color: #111;
+  }
+  body.dark-mode #hero-856 .cs-title,
+  body.dark-mode #hero-856 .cs-text,
+  body.dark-mode #hero-856 .cs-topper,
+  body.dark-mode #hero-856 .cs-number,
+  body.dark-mode #hero-856 .cs-desc {
+    color: var(--bodyTextColorWhite);
+  }
+}

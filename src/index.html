@@ -1,0 +1,476 @@
+---
+title: 'Learning 4 U'
+description: 'Discover the creative world of Aaron Corbett, an accomplished actor, playwright, and poet based in Worcester. Explore his work and artistic journey today!'
+preloadImg: '/assets/images/aaron-corbett.webp'
+permalink: '/'
+tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css"/>
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+    <!-- JSON Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-856">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h1 class="cs-title">Dedicated Tutors Ready to Help Your Child <span class="one">Succeed</span></h1>
+            <p class="cs-text">Join our growing community of successful learners and re-discover the joy of learning. 
+
+            </p>
+            <div class="cs-button-box"> 
+                <a href="/services" class="cs-button-solid">Let's Get Started</a> 
+            </div> 
+        </div>
+
+        <div class="cs-image-group">
+
+
+
+        <!--Hero Right Image-->
+        <picture class="cs-picture">
+            <!--Mobile-->
+            <source media="(max-width: 600px)" srcset="/assets/images/head.png">
+            <!--Tablet-->
+            <source media="(min-width: 601px)" srcset="/assets/images/head.png">
+            <!--Desktop-->
+            <source media="(min-width: 1024px)" srcset="/assets/images/head.png">
+            <img aria-hidden="true" decoding="async" src="/assets/images/head.png" alt="Purple rounded rectangle" width="570" height="600">
+            </picture>
+        </div>
+
+ 
+</section>
+
+
+
+
+<!-- ============================================ -->
+<!--            Services - Pink Stats                   -->
+<!-- ============================================ -->
+
+<section id="stats">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+
+                <div class="cs-flex">
+                    <h2 class="cs-h2">25+</h2>
+                    <p class="cs-item-text">
+                        Years Experience
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                
+
+                <div class="cs-flex">
+                    <h2 class="cs-h2">200+</h2>
+                    <p class="cs-item-text">
+                        Success Stories
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                
+
+                <div class="cs-flex">
+                    <h2 class="cs-h2">1000+</h2>
+                    <p class="cs-item-text">
+                        Tutoring Hours
+                    </p>
+                </div>
+        </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--         Side By Side - About         -->
+<!-- ============================================ -->
+
+<section id="sbs">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+
+            <!--Big Background Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/homework.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/homework.png">
+                <img loading="lazy" decoding="async" src="/assets/images/homework.png" alt="girl" width="542" height="720" aria-hidden="true">
+            </picture>
+            
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About</span>
+            <h2 class="cs-title">Welcome to <br>Learning 4 U Ltd</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    </p>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            </p>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href=/about>More About Us</a>
+        </div>
+    </div>
+
+        <!--SVG Hill Graphic-->
+        <svg class="cs-hills" width="1920" height="473" viewBox="0 0 1920 473" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 473H0V124.393C156.322 88.8155 463.597 0 932.085 0C1327.14 0 1826.24 60.6607 1920 124.393V473Z" fill="var(--hillBG)"/>
+        </svg>   
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+<section id="services-1188">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Services</span>
+            <h2 class="cs-title">What We Offer</h2>
+            <p class="cs-text">
+                Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis sagittis in blandit eleifend tortor ullamcorper eu placerat. Et orci felis volutpat, etiam vitae egestas volutpat pulvinar.
+            </p>
+            
+        </div>
+
+        <a href="/services" class="cs-button-solid">More About Services</a>
+
+
+
+        <ul class="cs-card-group">
+            <li class="cs-item2">
+                </li>
+                <li class="cs-item2">
+                </li>
+
+            <a href="/services">
+            <li class="cs-item">
+                
+                <picture class="cs-picture">
+                    <img class="cs-icon"
+                            src="/assets/images/star.svg"
+                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Maths</h3>
+                    <p class="cs-item-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </li>
+        </a>
+        </ul>
+
+
+
+        <ul class="cs-card-group">
+            <li class="cs-item2">
+            </li>
+        <a href="/services">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" src="/assets/images/star.svg"
+                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">English</h3>
+                    <p class="cs-item-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </li>
+            </a>
+        <a href="/services"> 
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon"
+                            src="/assets/images/star.svg"
+                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Science</h3>
+                    <p class="cs-item-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </li>
+        </a>
+        </ul>
+
+
+
+        <ul class="cs-card-group-last">
+            <a href="/services">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon"
+                            src="/assets/images/star.svg" loading="lazy"
+                            decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Essay Writing</h3>
+                    <p class="cs-item-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </li>
+        </a>
+            <a href="/services">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon"
+                            src="/assets/images/star.svg" loading="lazy"
+                            decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">KS1 & KS2 SATS Revision</h3>
+                    <p class="cs-item-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </li>
+        </a>
+            <a href="/services">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon"
+                            src="/assets/images/star.svg"
+                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">GCSE Exam Preparation</h3>
+                    <p class="cs-item-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </li>
+        </a>
+        </ul>
+
+
+
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--               Services - Purple                -->
+<!-- ============================================ -->
+
+<section id="services-1121">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                
+                <div class="cs-flexbox">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/supervisor.svg" alt="icon" width="48" height="48">
+
+                <div class="cs-flex">
+
+                    <h2 class="cs-h2">One-to-One Sessions</h2>
+                    <p class="cs-item-text">
+                        Direct one-to-one sessions with our qualified tutors.
+                    </p>
+                </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flexbox">
+                
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/group.svg" alt="icon" width="48" height="48">
+                </picture>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">Group Sessions</h2>
+                    <p class="cs-item-text">
+                        Group sessions of 1-3 children. 
+                        <br>This allows children to bounce off each other in a classroom-like setting.
+                    </p>
+                </div>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flexbox">
+                
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/support.svg" alt="icon" width="48" height="48">
+
+            <div class="cs-flex">
+                <h2 class="cs-h2">Support</h2>
+                <p class="cs-item-text">
+                    Our qualified tutors are there to support your children 100% of the way.
+                </p>
+            </div>
+            </div>
+        </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--         Side By Side - Why Choose         -->
+<!-- ============================================ -->
+
+<section id="sbs-r">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+
+            <!--Big Background Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/laptop.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/laptop.png">
+                <img loading="lazy" decoding="async" src="/assets/images/laptop.png" alt="girl" width="542" height="720" aria-hidden="true">
+            </picture>
+            
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Top-Quality Education <br>With Regular Communication</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/tick.svg" alt="checkmark" width="24" height="24">
+                    Lorem ipsum dolor sit amet.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/tick.svg" alt="checkmark" width="24" height="24">
+                    Lorem ipsum dolor sit amet.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/tick.svg" alt="checkmark" width="24" height="24">
+                    Lorem ipsum dolor sit amet.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/tick.svg" alt="checkmark" width="24" height="24">
+                    Lorem ipsum dolor sit amet.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/tick.svg" alt="checkmark" width="24" height="24">
+                    Lorem ipsum dolor sit amet.
+                </li>
+            </ul>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href=/about>More About Us</a>
+        </div>
+
+    </div>
+
+
+</section>
+
+                <!--SVG Hill Graphic-->
+                <svg class="cs-hills" width="1920" height="473" viewBox="0 0 1920 473" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1920 473H0V124.393C156.322 88.8155 463.597 0 932.085 0C1327.14 0 1826.24 60.6607 1920 124.393V473Z" fill="var(--hillBG)"/>
+                </svg>   
+
+                   
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+
+<section id="reviews-306">
+    <div class="cs-container">
+        <div class="cs-content1">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">What Our Students Say
+            </h2>
+        </div>
+        <div class="cs-picture-group">
+    <picture class="cs-image">
+        <source media="(max-width: 600px)" srcset="/assets/images/orange.png">
+        <source media="(min-width: 601px)" srcset="/assets/images/orange.png">
+        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/orange.png" alt="building" width="842" height="548">
+    </picture>
+    <div class="cs-content">
+        <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/top-quote.svg" alt="quote" width="40" height="33">
+        <p class="cs-review">
+            “I was really concerned with my child’s academic progress in school but I have been working with <br>Learning 4 U for 5 months and the change is undeniable.”            </p>
+        </p>
+        <div class="cs-info">
+            <div class="cs-flex">
+                <span class="cs-name">Lorraine</span>
+                <span class="cs-job">Parent</span>
+            </div>
+        </div>
+        <!--Bottom watermark quote-->
+        <img class="cs-watermark" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/top-quote.svg" alt="quote" width="136" height="120">
+        <a class="cs-button-solid" aria-label="read more testimoials" href=/about>More Testimonials</a>
+    </div>
+    </div>
+    </div>
+</section>
+                                
+
+
+
+
+    {% include 'components/cta.html' %}
+{% endblock %}

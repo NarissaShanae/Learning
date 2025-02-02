@@ -1,0 +1,95 @@
+---
+title: 'Contact | Aaron Corbett'
+description: 'Get in touch with Aaron Corbett, the Worcester-based actor, playwright, and poet. He’d love to hear from you! Reach out for inquiries or collaboration.'
+preloadImg: '/assets/images/aaron-corbett.webp'
+permalink: 'contact/'
+eleventyNavigation:
+    key: Contact
+    order: 600
+    hideOnDesktop: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Contact</h1>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Contact Form                  -->
+    <!-- ============================================ -->
+
+    <section id="cs-contact">
+        <div class="cs-container">
+                <div class="cs-content">
+                    <span class="cs-topper"></span>
+                    <h2 class="cs-title">Get in Touch</h2>
+                    <p class="cs-text">
+                        Have a question, collaboration idea, or just want to say hello, feel free to reach out.             </p>
+                
+                    <form id="cs-form" name="Contact Form" method="post" data-netlify="true">          
+                        <label>
+                        Name
+                    <input required type="text" id="name" name="name" placeholder="John Smith">
+                </label>
+                <label>
+                    Email
+                    <input required type="text" id="email" name="email" placeholder="email@example.com">
+                </label>
+                <label>
+                    Phone
+                    <input required type="text" id="phone" name="phone" placeholder="Phone">
+                </label>
+                <label>
+                    How Did You Find Aaron?
+                    <input type="text" id="find" name="find-us" placeholder="e.g. social media, live event etc.">
+                </label>
+                <label class="cs-label-message">
+                    Message
+                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
+                </label>
+                <div data-netlify-recaptcha="true"></div>
+                <button class="cs-button-solid" type="submit">Submit Message</button>
+            </form>
+        </div>
+            
+            <div class="cs-right-section">
+                <!--Email-->
+                <span class="cs-header">Email</span>
+                <a class="cs-link" href="mailto:{{client.email}}">Click To Email</a>
+                
+                <!--Social Buttons-->
+                <div class="cs-social-group">
+                <span class="cs-header">Social</span>
+                <div class="cs-social">
+
+                <a class="cs-social-link" aria-label="visit facebook profile" href="https://www.facebook.com/" target="_blank" rel="noopener">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/Facebook_Logo.svg" alt="google" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit instagram profile" href="https://www.instagram.com/creative.aztheticz" target="_blank" rel="noopener">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/Instagram_White.svg" alt="facebook" width="6" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit youtube channel" href="https://www.youtube.com/" target="_blank" rel="noopener">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/white_youtube_logo.svg" alt="instagram" width="11" height="11">
+                </a>
+            </div>
+                <!-- Background Image-->
+                <picture class="cs-bg-picture">
+                    <source media="(min-width: 601px)" srcset="/assets/images/aaron-corbett.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/aaron-corbett.webp" alt="aaron corbett smiling" loading="lazy" width="2500" height="1667">
+                </picture>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

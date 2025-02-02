@@ -1,0 +1,337 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Standard meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore the evocative poetry of Aaron Corbett, a Worcester-based actor and playwright. Discover the depth of his words and artistic vision.">
+        <meta name="keywords" content="">
+        <link rel="canonical" href="https://www.aaroncorbett.co.uk/poetry/">
+
+        <!--Social Media Display-->
+        <meta property="og:title" content="Poetry | Aaron Corbett"/>
+        <meta property="og:description" content="Explore the evocative poetry of Aaron Corbett, a Worcester-based actor and playwright. Discover the depth of his words and artistic vision."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.aaroncorbett.co.uk/poetry/"/>
+        <meta property="og:image" content="/assets/images/l4ulogo.png"/>
+        <meta property="og:image:secure_url" content="/assets/images/l4ulogo.png"/>
+
+        <!--Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicons/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Preloads -->
+        <link rel="preload" as="image" href="/assets/images/l4ulogo.png">
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lilita-one-v15-latin-regular.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+
+
+        <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+        
+            <link rel="preload" as="image" href="/assets/images/aaron-corbett-graffiti-black-hoodie.webp"/>
+        
+
+        <!-- Sitewide Stylesheets and Scripts -->
+        <link rel="stylesheet" href="/assets/css/root.css">
+        <link rel="stylesheet" href="/assets/css/dark.css">
+        <script defer src="/assets/js/dark.js"></script>
+        <script defer src="/assets/js/nav.js"></script>
+
+
+        
+    <link rel="stylesheet" href="/assets/css/about.css">
+
+
+        <title>Poetry | Aaron Corbett</title>
+    </head>
+    <body>
+        <!--Screen reader skip main nav-->
+        <a class="skip" aria-label="skip to main content" href="#main" tabindex="0">Click To Skip To Main Content</a>
+
+        <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="/" class="cs-logo" aria-label="back to home">
+            <img src="/assets/images/l4ulogo.png" alt="chosen web designs logo" width="220" height="39" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-hamburger" id="mobile-menu-toggle" aria-expanded="false" aria-controls="cs-expanded-ul" aria-label="mobile menu toggle" >
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul">
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+                        <li class="cs-li  ">
+
+                            
+                            
+                                
+                                <a href="/" class="cs-li-link " >
+                                    Home
+                                </a>
+                            
+                        </li>
+                    
+
+                        
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+                        <li class="cs-li  ">
+
+                            
+                            
+                                
+                                <a href="/about/" class="cs-li-link " >
+                                    About
+                                </a>
+                            
+                        </li>
+                    
+
+                        
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+                        <li class="cs-li  ">
+
+                            
+                            
+                                
+                                <a href="false" class="cs-li-link " >
+                                    Services
+                                </a>
+                            
+                        </li>
+                    
+
+                        
+                        
+
+                        
+                        
+                        
+                        
+
+                        
+                        <li class="cs-li  ">
+
+                            
+                            
+                                
+                                <a href="/reviews/" class="cs-li-link " >
+                                    Reviews
+                                </a>
+                            
+                        </li>
+                    
+
+                        
+                        
+
+                        
+                        
+                        
+                        
+                            
+                        
+
+                        
+                        <li class="cs-li  cs-hide-on-desktop">
+
+                            
+                            
+                                
+                                <a href="/contact/" class="cs-li-link " >
+                                    Contact
+                                </a>
+                            
+                        </li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <a href="/contact"  class="cs-button-solid">Let's Get Started</a>
+
+
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <button id="dark-mode-toggle" aria-label="dark mode toggle" >
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="/assets/svgs/sun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button>
+    </div>
+</header>
+        <main id="main">
+                
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Poetry</h1>
+
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/aaron-corbett-graffiti-black-hoodie.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/aaron-corbett-graffiti-black-hoodie.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/aaron-corbett-graffiti-black-hoodie.webp" alt="aaron corbett wearing a black hoodie" loading="lazy" width="400" height="563">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper"></span>
+                <h2 class="cs-title">'Azthetics' Poetry</h2>
+                <p class="cs-text">
+Coming Soon                 </p>
+               <!-- <a href="/projects" class="cs-button-solid">Our Projects</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+    <div class="container">
+        <h2 class="title">
+            Ready to kickstart your child’s learning?
+        </h2>
+        <p class="cs-text">
+            I would love to hear from you! Whether you have a question, or want to discuss your next web design project, I am here to help. Reach out to me through the form, or connect with me directly via email. 
+            <br> <br>Let me bring your vision to life!   </p>
+        <a href="/contact" class="cs-button-solid">Get In Touch</a>
+    </div>
+
+
+</section>
+
+
+        </main>
+        <!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="left-section">
+            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/images/l4ulogo.png" alt="logo" width="264" height="78"></a>
+            <p>
+                Pdvssvsvsdvsvsd
+            </p>
+            <div class="image-row">
+            <a class="fbicon" href="https://www.facebook.com/" target="_blank" rel="noopener"> <img loading="lazy" decoding="async" 
+                img src="/assets/svgs/Facebook_Logo.svg" alt="white Facebook logo" width="30" height="30" border="0" /> </a>
+
+            <a class="insicon" href="https://www.instagram.com/creative.aztheticz" target="_blank" rel="noopener"> <img loading="lazy" decoding="async" 
+                img src="/assets/svgs/Instagram_White.svg" alt="Instagram" width="30" height="30" border="0" /> </a>
+
+            <a class="yticon" href="https://www.youtube.com/" target="_blank" rel="noopener"> <img loading="lazy" decoding="async" 
+                img src="/assets/svgs/white_youtube_logo.svg" alt="white Youtube logo" width="40" height="30" border="0" /> </a>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="lists">
+                <ul>
+                    <li>
+                        <h2>Quick Links</h2>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/services">Services</a>
+                    </li>
+                    <li>
+                        <a href="/reviews">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h2>Contact</h2>
+                    </li>
+                    <li>
+                        <a href="mailto:aaron.corbett16@gmail.com">Click To Email</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="credit">
+        <div class="content-group">
+                       
+        <a href="/privacy-policy">Privacy Policy</a> |
+
+        <a href="/sitemap.xml" target="_blank" rel="noopener">Sitemap</a> <br>
+        </div>
+
+        <span>Designed by <a href="https://chosenwebdesigns.co.uk" target="_blank" rel="noopener">Chosen Web Designs</a><br></span>
+        <span class="copyright">
+        Copyright 2025</span>
+    </div>
+</footer>
+
+
+    </body>
+</html>

@@ -1,6 +1,6 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 /*-- -------------------------- -->
-<---         Pink  Stats         -->
+<---         Pink Stats         -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -356,6 +356,10 @@
   body.dark-mode #sbs-r .cs-li {
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #sbs .cs-topper,
+  body.dark-mode #sbs-r .cs-topper {
+    color: var(--primaryLight);
+  }
   body.dark-mode #sbs .cs-text,
   body.dark-mode #sbs-r .cs-text {
     opacity: 0.8;
@@ -554,10 +558,6 @@
   body.dark-mode #services-1188 .cs-topper {
     color: var(--primaryLight);
   }
-  body.dark-mode #services-1188 .cs-text,
-  body.dark-mode #services-1188 .cs-item-text {
-    opacity: 0.8;
-  }
   body.dark-mode #services-1188 .cs-icon {
     /* turns it white */
     filter: grayscale(1) brightness(1000%);
@@ -567,6 +567,10 @@
   body.dark-mode #services-1188 .cs-h3,
   body.dark-mode #services-1188 .cs-item-text {
     color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-1188 .cs-item:hover .cs-h3,
+  body.dark-mode #services-1188 .cs-item:hover .cs-item-text {
+    color: var(--bodyTextColor);
   }
 }
 /*-- -------------------------- -->
@@ -789,12 +793,12 @@
   body.dark-mode #services-1724 {
     background-color: #000;
   }
+  body.dark-mode #services-1724 .cs-topper {
+    color: var(--primaryLight);
+  }
   body.dark-mode #services-1724 .cs-title,
   body.dark-mode #services-1724 .cs-text {
     color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #services-1724 .cs-text {
-    opacity: 0.8;
   }
 }
 /*-- -------------------------- -->
@@ -1108,6 +1112,10 @@
     padding-left: clamp(4.75rem, 10vw, 8rem);
     padding-right: 2rem;
   }
+  #reviews-306 .cs-content1 {
+    margin-left: 50%;
+    margin-bottom: 0rem;
+  }
   #reviews-306 .cs-watermark {
     /* 16px - 175px */
     right: calc(clamp(1rem, 9.5vw, 10.9375rem)*-1);
@@ -1125,5 +1133,8 @@
   body.dark-mode #reviews-306 .cs-job {
     color: var(--bodyTextColorWhite);
     opacity: 0.7;
+  }
+  body.dark-mode #reviews-306 .cs-topper {
+    color: var(--primaryLight);
   }
 }

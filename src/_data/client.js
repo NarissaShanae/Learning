@@ -1,7 +1,7 @@
 module.exports = {
     "name": "Learning 4 U",
     "email": "info@learning4u.me.uk",
-    "phoneForTel": "+44 333 772 6019",
+    "phoneForTel": "0333 772 6019",
     "phoneFormatted": "",
     "address": {
         "lineOne": "",

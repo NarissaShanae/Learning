@@ -33,7 +33,6 @@
     /* 404px - 522px */
     max-width: clamp(25.25rem, 30vw, 32.625rem);
     text-align: left;
-    text-decoration: none;
   }
   #cs-contact .cs-social-group {
     display: flex;
@@ -146,7 +145,7 @@
   #cs-contact .cs-link {
     position: relative;
     display: block;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     text-decoration: none;
     /* 16px - 20px */
     font-size: clamp(1rem, 3vw, 1.25rem);

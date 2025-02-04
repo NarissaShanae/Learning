@@ -64,8 +64,9 @@
   }
   #sbs .cs-text {
     margin-bottom: 1rem;
-    max-width: 46.875rem;
+    max-width: 50rem;
     text-align: left;
+    font-size: 1.25rem;
   }
   #sbs .cs-text:last-of-type {
     margin-bottom: 2rem;
@@ -78,11 +79,15 @@
     font-size: 18px;
     color: var(--headerColor);
   }
+  #sbs a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 1.25rem;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #sbs .cs-container {
-    flex-flow: row;
     gap: 3.25rem;
   }
   #sbs .cs-left {

@@ -1,15 +1,15 @@
 module.exports = {
     "name": "Learning 4 U",
-    "email": "aaron.corbett16@gmail.com",
-    "phoneForTel": "",
+    "email": "info@learning4u.me.uk",
+    "phoneForTel": "+44 333 772 6019",
     "phoneFormatted": "",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "country": "US",
+        "lineOne": "",
+        "lineTwo": "",
+        "city": "Birmingham",
+        "state": "",
+        "zip": "",
+        "country": "UK",
         "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
     },
     "socials": {
@@ -17,5 +17,5 @@ module.exports = {
         "instagram": "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.aaroncorbett.co.uk"
+    "domain": "https://www.learning4u.me.uk"
 };

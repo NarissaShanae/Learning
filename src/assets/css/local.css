@@ -1,4 +1,10 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+    background-color: var(--dark);
+  }
+}
 /*-- -------------------------- -->
 <---         Pink Stats         -->
 <--- -------------------------- -*/
@@ -317,6 +323,12 @@
   }
   #sbs .cs-picture {
     width: 90%;
+  }
+  #sbs .cs-content-review {
+    /* 76px - 128px */
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   #sbs,
   #sbs-r {
@@ -973,61 +985,12 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-306 {
-    /* prevents overflow from overlapping quote icon */
-    overflow: hidden;
-    position: relative;
+  #reviews {
     padding: var(--sectionPadding);
+    overflow: hidden;
     background-color: #fafafa;
-    z-index: 4;
-    padding-top: 0rem;
   }
-  #reviews-306 .cs-container {
-    /* changes to 1280px at tablet */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    margin: auto;
-    width: 100%;
-  }
-  #reviews-306 .cs-content1 {
-    /* set text align to left if content needs to be left aligned */
-    text-align: left;
-    width: 100%;
-    max-width: 39.375rem;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
-    margin-bottom: 2rem;
-  }
-  #reviews-306 .cs-title {
-    max-width: 25ch;
-    margin: 0;
-  }
-  #reviews-306 .cs-picture-group {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  #reviews-306 .cs-image {
-    width: 100%;
-    max-height: 28.125rem;
-    display: block;
-    position: relative;
-    aspect-ratio: 360/380;
-  }
-  #reviews-306 .cs-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  #reviews-306 .cs-content {
+  #reviews .cs-content-review {
     max-width: 39.375rem;
     padding: var(--sectionPadding);
     display: flex;
@@ -1036,7 +999,7 @@
     flex-direction: column;
     position: relative;
   }
-  #reviews-306 .cs-review {
+  #reviews .cs-review {
     /* 25px - 39px */
     font-size: 1.125rem;
     text-align: left;
@@ -1045,18 +1008,21 @@
     margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
     color: var(--bodyTextColor);
   }
-  #reviews-306 .cs-quote {
+  #reviews .cs-quote-yellow {
     width: 2.5rem;
     height: auto;
     margin-bottom: 2rem;
     display: block;
   }
-  #reviews-306 .cs-info {
+  #reviews .cs-quote-pink {
+    display: none;
+  }
+  #reviews .cs-info {
     display: flex;
     justify-content: auto;
     align-items: center;
   }
-  #reviews-306 .cs-flex {
+  #reviews .cs-flex {
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1064,14 +1030,14 @@
     flex-basis: content;
     margin-bottom: 2rem;
   }
-  #reviews-306 .cs-profile {
+  #reviews .cs-profile {
     width: 3.125rem;
     height: auto;
     margin-right: 0.75rem;
     border-radius: 50%;
     display: block;
   }
-  #reviews-306 .cs-name {
+  #reviews .cs-name {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     font-weight: 700;
@@ -1080,7 +1046,7 @@
     display: block;
     flex-basis: content;
   }
-  #reviews-306 .cs-job {
+  #reviews .cs-job {
     font-size: 1rem;
     line-height: 1.5em;
     font-weight: 400;
@@ -1089,7 +1055,7 @@
     display: block;
     flex-basis: content;
   }
-  #reviews-306 .cs-watermark {
+  #reviews .cs-watermark-yellow {
     /* 87px - 136px */
     width: clamp(5.4375rem, 12.2vw, 8.5rem);
     height: auto;
@@ -1098,69 +1064,210 @@
     bottom: 0;
     right: 1.25rem;
   }
+  #reviews .cs-watermark-pink {
+    display: none;
+  }
+  #reviews .cs-hills {
+    /* hills Color */
+    --hillBG: #fafafa;
+    width: 150%;
+    height: auto;
+    position: relative;
+    /* top: 384%; */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    padding-top: 4rem;
+    margin-bottom: -25%;
+  }
+  #reviews .cs-hills path {
+    border-top: 0.625em solid #fddaaa;
+  }
+  #reviews .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: clamp(3rem, 4vw, 4rem);
+    z-index: 3;
+  }
+  #reviews .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 49.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+  #reviews .cs-topper {
+    color: var(--secondary);
+  }
+  #reviews .cs-text {
+    margin-bottom: 1rem;
+  }
+  #reviews .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #reviews .cs-ul {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 2.5rem;
+    row-gap: 0.75rem;
+  }
+  #reviews .cs-li {
+    font-size: var(--bodyFontSize);
+    list-style: none;
+    line-height: 1.5em;
+    width: 100%;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #reviews .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    /* adds extra space between the icon and top of parent so it's more centered */
+    margin-top: 1px;
+    display: block;
+  }
+  #reviews .cs-image-group {
+    /* font size scaling. Everything inside the group is in ems so they pull their value for em from the parent (this group div) and when the font is set to a vw, it scales the whole section down and grows proportionally with the screen width, stopping at the final em value declared in the second slot for the min function. */
+    font-size: min(2.25vw, .83em);
+    width: 100%;
+    min-height: 34em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #reviews .cs-picture {
+    height: 23rem;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #reviews .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews .cs-number {
+    /* 24px - 49px */
+    font-size: clamp(1.25rem, 4.3vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: 900;
+    margin: 0;
+    color: var(--secondary);
+    display: block;
+    z-index: 10;
+  }
+  #reviews .cs-desc {
+    /* 12px - 16px */
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    font-weight: bold;
+    width: 100%;
+    max-width: 20ch;
+    color: var(--bodyTextColor);
+    position: relative;
+    z-index: 10;
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-306 {
+  #reviews {
+    position: relative;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: -8%;
+  }
+  #reviews .cs-content {
+    width: 47%;
+  }
+  #reviews .cs-picture {
+    width: 90%;
+  }
+  #reviews .cs-content-review {
+    /* 76px - 128px */
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  #reviews .cs-container {
+    max-width: 80rem;
+    /* set to horizontal arrangement */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: stretch;
   }
-  #reviews-306 .cs-container {
-    max-width: 80rem;
+  #reviews .cs-content {
+    align-self: center;
   }
-  #reviews-306 .cs-image {
-    width: 44%;
-    height: auto;
-    max-height: 100%;
-    /* prevent flexbox from squishing it */
-    flex: none;
-    aspect-ratio: initial;
+  #reviews .cs-image-group {
+    font-size: min(1.2vw, 1em);
+    /* sends it to the right in the 2nd position */
+    width: 30rem;
   }
-  #reviews-306 .cs-title {
-    max-width: 100%;
-    padding-left: 3rem;
+  #reviews .cs-picture {
+    height: 30rem;
   }
-  #reviews-306 .cs-topper {
-    padding-left: 3rem;
-  }
-  #reviews-306 .cs-picture-group {
-    flex-direction: row;
-    order: 2;
-  }
-  #reviews-306 .cs-content {
-    /* 76px - 128px */
-    padding-left: clamp(4.75rem, 10vw, 8rem);
-    padding-right: 4rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-  #reviews-306 .cs-content1 {
-    margin-left: 50%;
-    margin-bottom: 0rem;
-  }
-  #reviews-306 .cs-info {
-    padding-bottom: 1rem;
-  }
-  #reviews-306 .cs-watermark {
-    /* 16px - 175px */
-    right: calc(clamp(1rem, 9.5vw, 10.9375rem)*-1);
+  #reviews .cs-text {
+    width: 80%;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #reviews-306 {
-    background-color: rgba(0, 0, 0, 0.2);
+  body.dark-mode #reviews {
+    background-color: var(--dark);
   }
-  body.dark-mode #reviews-306 .cs-review,
-  body.dark-mode #reviews-306 .cs-name {
+  body.dark-mode #reviews .cs-review,
+  body.dark-mode #reviews .cs-name {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #reviews-306 .cs-job {
+  body.dark-mode #reviews .cs-job {
     color: var(--bodyTextColorWhite);
     opacity: 0.7;
   }
-  body.dark-mode #reviews-306 .cs-topper {
+  body.dark-mode #reviews .cs-topper {
     color: var(--primaryLight);
+  }
+  body.dark-mode #reviews .cs-quote-pink {
+    width: 2.5rem;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  body.dark-mode #reviews .cs-quote-yellow,
+  body.dark-mode #reviews .cs-watermark-yellow {
+    display: none;
+  }
+  body.dark-mode #reviews .cs-watermark-pink {
+    /* 87px - 136px */
+    width: clamp(5.4375rem, 12.2vw, 8.5rem);
+    height: auto;
+    opacity: 0.09;
+    position: absolute;
+    bottom: 0;
+    right: 1.25rem;
+    display: block;
   }
 }

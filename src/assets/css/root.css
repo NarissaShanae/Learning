@@ -757,8 +757,8 @@
     transition: color 0.3s, background-color 0.3s;
   }
   #cs-navigation .cs-li-link.cs-drop-link:hover {
-    color: var(--bodyTextColorWhite);
-    background-color: var(--primary);
+    color: var(--secondary);
+    background-color: var(--bodyTextColorWhite);
   }
   #cs-navigation .cs-li-link.cs-drop-link:before {
     display: none;
@@ -770,7 +770,7 @@
     background-color: var(--dark);
   }
   body.dark-mode #cs-navigation .cs-li-link.cs-drop-link:hover {
-    color: var(--bodyTextColorWhite);
+    color: var(--secondary);
   }
 }
 /*-- -------------------------- -->
@@ -889,7 +889,7 @@
     transition: color 0.3s;
   }
   #cs-navigation .cs-li-link:hover {
-    color: var(--primary);
+    color: var(--secondary);
   }
   #cs-navigation .cs-li-link.cs-active {
     color: var(--secondary);
@@ -958,7 +958,7 @@
     align-items: center;
     min-height: 30vh;
     padding-top: 3.125rem;
-    background-color: #000;
+    background-color: #ca1872;
   }
   #int-hero h1 {
     position: relative;
@@ -979,18 +979,6 @@
     width: 96%;
     color: #fff;
     text-align: center;
-  }
-  #int-hero:before {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    opacity: 0.7;
-    display: block;
-    background: #000;
-    height: 100%;
-    width: 100%;
   }
 }
 /* Tablet */
@@ -1021,7 +1009,7 @@
   #cta {
     position: relative;
     padding: 3.125rem 0;
-    background-color: var(--secondary);
+    background-color: #ca1872;
   }
   #cta .container {
     text-align: center;
@@ -1052,13 +1040,13 @@
     text-align: center;
   }
   #cta p {
-    opacity: 1;
     margin: auto;
     margin-bottom: 2.25rem;
     max-width: 37.375rem;
     width: 96%;
     color: var(--bodyTextColorWhite);
     text-align: center;
+    font-size: 1.25rem;
   }
   #cta:before {
     z-index: -1;
@@ -1078,10 +1066,10 @@
     color: var(--bodyTextColor);
   }
   #cta .cs-button-solid:hover {
-    color: var(--bodyTextColorWhite);
+    color: var(--secondary);
   }
   #cta .cs-button-solid:hover:before {
-    background-color: var(--bodyTextColor);
+    background-color: var(--bodyTextColorWhite);
   }
 }
 /* Small Desktop */

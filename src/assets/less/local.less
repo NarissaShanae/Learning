@@ -1,5 +1,11 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        background-color: var(--dark);
+    }
+}
 
 /*-- -------------------------- -->
 <---         Pink Stats         -->
@@ -179,8 +185,8 @@
         .cs-title {
             font-size: 1.7rem;
         }
-
     }
+
 
     #sbs, #sbs-r {
         padding: var(--sectionPadding);
@@ -305,8 +311,6 @@
             }
         }
 
-
-
         .cs-number {
             /* 24px - 49px */
             font-size: clamp(1.25rem, 4.3vw, 3.0625rem);
@@ -330,7 +334,6 @@
             position: relative;
             z-index: 10;
         }
-
 
     }
 }
@@ -366,6 +369,13 @@
 
         .cs-picture {
             width: 90%;
+        }
+
+        .cs-content-review {
+            /* 76px - 128px */
+            padding-right: 4rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
     }
 
@@ -1151,68 +1161,13 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #reviews-306 {
-        /* prevents overflow from overlapping quote icon */
-        overflow: hidden;
-        position: relative;
+    #reviews {
+
         padding: var(--sectionPadding);
+        overflow: hidden;
         background-color: #fafafa;
-        z-index: 4;
-        padding-top: 0rem;
 
-        .cs-container {
-            /* changes to 1280px at tablet */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            margin: auto;
-            width: 100%;
-        }
-
-        .cs-content1 {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            max-width: (630/16rem);
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-
-        .cs-title {
-            max-width: 25ch;
-            margin: 0;
-        }
-
-        .cs-picture-group {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-
-        .cs-image {
-            width: 100%;
-            max-height: (450/16rem);
-            display: block;
-            position: relative;
-            aspect-ratio: 360/380;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .cs-content {
+        .cs-content-review {
             max-width: (630/16rem);
             padding: var(--sectionPadding);
             display: flex;
@@ -1221,6 +1176,7 @@
             flex-direction: column;
             position: relative;
         }
+
 
         .cs-review {
             /* 25px - 39px */
@@ -1232,11 +1188,15 @@
             color: var(--bodyTextColor);
         }
 
-        .cs-quote {
+        .cs-quote-yellow {
             width: (40/16rem);
             height: auto;
             margin-bottom: (32/16rem);
             display: block;
+        }
+
+        .cs-quote-pink {
+            display: none;
         }
 
         .cs-info {
@@ -1282,7 +1242,7 @@
             flex-basis: content;
         }
 
-        .cs-watermark {
+        .cs-watermark-yellow {
             /* 87px - 136px */
             width: clamp(5.4375rem, 12.2vw, 8.5rem);
             height: auto;
@@ -1291,72 +1251,217 @@
             bottom: 0;
             right: (20/16rem);
         }
-    }
-}
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #reviews-306 {
-        display: flex;
-        justify-content: flex-start;
-        align-items: stretch;
+        .cs-watermark-pink {
+            display: none;
+        }
+
+        .cs-hills {
+            /* hills Color */
+            --hillBG: #fafafa;
+
+            width: 150%;
+            height: auto;
+            position: relative;
+            /* top: 384%; */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            padding-top: 4rem;
+            margin-bottom: -25%;
+
+            path {
+            border-top: (10/16em) solid #fddaaa;
+            }
+        }
 
         .cs-container {
-            max-width: 80rem;
-        }
-
-        .cs-image {
-            width: 44%;
-            height: auto;
-            max-height: 100%;
-            /* prevent flexbox from squishing it */
-            flex: none;
-            aspect-ratio: initial;
-        }
-
-        .cs-title {
-            max-width: 100%;
-            padding-left: 3rem;
-        }
-
-        .cs-topper {
-            padding-left: 3rem;
-        }
-
-        .cs-picture-group {
-            flex-direction: row;
-            order: 2;
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: clamp(3rem, 4vw, 4rem);
+            z-index: 3;
         }
 
         .cs-content {
-            /* 76px - 128px */
-            padding-left: clamp(4.75rem, 10vw, 8rem);
-            padding-right: 4rem;
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: 49.875rem;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+            position: relative;
+            z-index: 10;
+            
         }
 
-        .cs-content1 {
-            margin-left: 50%;
-            margin-bottom: 0rem;
+        .cs-topper {
+            color: var(--secondary);
         }
 
-        .cs-info {
-            padding-bottom: 1rem;
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
         }
 
-        .cs-watermark {
-            /* 16px - 175px */
-            right: ~"calc(clamp(1rem, 9.5vw, 10.9375rem)*-1)";
+        .cs-ul {
+            width: 100%;
+            margin: 0 0 (32/16rem) 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            column-gap: (40/16rem);
+            row-gap: (12/16rem);
         }
+
+        .cs-li {
+            font-size: var(--bodyFontSize);
+            list-style: none;
+            line-height: 1.5em;
+            width: 100%;
+            color: var(--bodyTextColor);
+            display: flex;
+            justify-content: flex-start;
+            /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+            align-items: flex-start;
+            gap: (8/16rem);
+        }
+
+        .cs-icon {
+            width: (24/16rem);
+            height: auto;
+            /* adds extra space between the icon and top of parent so it's more centered */
+            margin-top: 1px;
+            display: block;
+        }
+
+        .cs-image-group {
+            /* font size scaling. Everything inside the group is in ems so they pull their value for em from the parent (this group div) and when the font is set to a vw, it scales the whole section down and grows proportionally with the screen width, stopping at the final em value declared in the second slot for the min function. */
+            font-size:~"min(2.25vw, .83em)";
+            width: 100%;
+            min-height: 34em;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .cs-picture {
+            height: 23rem;
+            width: 100%;
+            overflow: hidden;
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-number {
+            /* 24px - 49px */
+            font-size: clamp(1.25rem, 4.3vw, 3.0625rem);
+            line-height: 1.2em;
+            font-weight: 900;
+            margin: 0;
+            color: var(--secondary);
+            display: block;
+            z-index: 10;
+        }
+
+        .cs-desc {
+            /* 12px - 16px */
+            font-size: clamp(.75rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            font-weight: bold;
+            width: 100%;
+            max-width: 20ch;
+            color: var(--bodyTextColor);
+            position: relative;
+            z-index: 10;
+        }
+
     }
 }
+
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: -8%;
+
+            .cs-content {
+                width: 47%;
+            }
+    
+            .cs-picture {
+                width: 90%;
+            }
+    
+            .cs-content-review {
+                /* 76px - 128px */
+                padding-right: 4rem;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+    
+    
+            .cs-container {
+                max-width: (1280/16rem);
+                /* set to horizontal arrangement */
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+                
+            }
+    
+            .cs-content {
+                align-self: center;
+            }
+    
+            
+            .cs-image-group {
+                font-size:~"min(1.2vw, 1em)";
+                /* sends it to the right in the 2nd position */
+                width: 30rem;
+                
+            }
+    
+            .cs-picture {
+                height: 30rem;
+            }
+    
+            .cs-text {
+                width: 80%;
+            }
+        }
+    }
+
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #reviews-306 {
-            background-color: rgba(0, 0, 0, 0.2);
+        #reviews {
+            background-color: var(--dark);
             .cs-review,
             .cs-name {
                 color: var(--bodyTextColorWhite);
@@ -1369,6 +1474,28 @@
 
             .cs-topper {
                 color: var(--primaryLight);
+            }
+
+            .cs-quote-pink {
+                width: (40/16rem);
+                height: auto;
+                margin-bottom: (32/16rem);
+                display: block;
+            }
+
+            .cs-quote-yellow, .cs-watermark-yellow {
+                display: none;
+            }
+
+            .cs-watermark-pink {
+                /* 87px - 136px */
+                width: clamp(5.4375rem, 12.2vw, 8.5rem);
+                height: auto;
+                opacity: 0.09;
+                position: absolute;
+                bottom: 0;
+                right: (20/16rem);
+                display: block;
             }
         }
     }

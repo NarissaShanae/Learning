@@ -76,8 +76,9 @@
 
         .cs-text {
             margin-bottom: (16/16rem);
-            max-width: (750/16rem);
+            max-width: 50rem;
             text-align: left;
+            font-size: 1.25rem;
 
             &:last-of-type {
                 margin-bottom: (32/16rem);
@@ -93,6 +94,12 @@
             font-size: 18px;
             color: var(--headerColor);
         }       
+
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 1.25rem;
+        }
     }
 }
 
@@ -100,7 +107,6 @@
 @media only screen and (min-width: 64rem) {
     #sbs {
         .cs-container {
-            flex-flow: row;
             gap: (52/16rem);
         }
 

@@ -1099,6 +1099,9 @@
     margin: auto;
     margin-bottom: 3.125rem;
     text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   #footer .left-section .logo {
     display: inline-block;
@@ -1114,23 +1117,26 @@
     height: 145%;
     width: auto;
   }
+  #footer .left-section a.whatsapp-white {
+    display: none;
+  }
+  #footer .left-section a.whatsapp-black {
+    display: block;
+  }
   #footer .left-section p {
-    opacity: 0.9;
     margin: auto;
     width: 100%;
     font-size: 1.125rem;
     line-height: 1.92857143rem;
     color: var(--bodyTextColor);
     text-align: center;
-    font-family: "Inter";
+    font-family: "Roboto";
     padding-bottom: 2rem;
   }
   #footer .left-section .image-row {
-    width: 36%;
     display: flex;
     justify-content: space-between;
     /* this will add equal space between each image */
-    margin-left: 32%;
   }
   #footer .right-section {
     margin: auto;
@@ -1157,7 +1163,6 @@
     opacity: 0.9;
     margin-bottom: 0.75rem;
     list-style: none;
-    font-size: 1.125rem;
     color: var(--bodyTextColor);
   }
   #footer .right-section .lists ul li a {
@@ -1221,7 +1226,6 @@
   #footer .credit2 {
     margin: auto;
     width: 96%;
-    font-size: 1rem;
     line-height: 2.25rem;
     color: var(--bodyTextColor);
     /* Designed by text colour - light & dark mode - desktop & mobile */
@@ -1270,8 +1274,6 @@
   #footer .left-section {
     margin: 0;
     width: 28.5625rem;
-    align-items: center;
-    flex-direction: row;
   }
   #footer .left-section .logo {
     height: 2.5rem;
@@ -1284,7 +1286,6 @@
   }
   #footer .left-section p {
     text-align: center;
-    font-size: 1rem;
     padding-bottom: 2.1875rem;
   }
   #footer .left-section .image-row {
@@ -1297,7 +1298,7 @@
     width: 38.0625rem;
   }
   #footer .right-section .lists {
-    width: 96%;
+    width: 49%;
     flex-direction: row;
     max-width: 28.0625rem;
     text-align: left;
@@ -1343,8 +1344,29 @@
     background: var(--dark);
     /* Footer background colour - dark mode - desktop & mobile */
   }
-  body.dark-mode #footer .right-section li a,
+  body.dark-mode #footer p,
+  body.dark-mode #footer a {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .lists ul li a {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .lists ul li a:hover {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .lists ul li {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer a.whatsapp-white {
+    display: block;
+  }
+  body.dark-mode #footer a.whatsapp-black {
+    display: none;
+  }
   body.dark-mode #footer .right-section h2 {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .right-section h2 ul li {
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #footer .credit {

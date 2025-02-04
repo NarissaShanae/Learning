@@ -47,7 +47,7 @@
             display: flex;
             flex-direction: column;
             /* 32px - 80px */
-            margin-top: clamp(2rem, 6vw, 5rem);
+            margin-top: 2rem;
         }
 
         .cs-social {
@@ -150,6 +150,11 @@
             /* 24px - 40px top & bottom */
             /* 20px - 40px left & right */
             padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
+
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+                margin-bottom: 0rem;
+            }
         }
 
         .cs-header {
@@ -165,7 +170,7 @@
         .cs-link {
             position: relative;
             display: block;
-            margin-bottom: (20/16rem);
+            padding-bottom: 2rem;
             text-decoration: none;
             /* 16px - 20px */
             font-size: clamp(1rem, 3vw, 1.25rem);

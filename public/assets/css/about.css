@@ -129,4 +129,8 @@
   body.dark-mode #sbs .cs-quote-icon {
     opacity: 0.2;
   }
+  body.dark-mode #sbs a {
+    color: var(--bodyTextColorWhite);
+    font-weight: 700;
+  }
 }

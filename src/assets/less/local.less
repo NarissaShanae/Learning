@@ -4,6 +4,9 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         background-color: var(--dark);
+        .cs-hills {
+            display: none;
+        }
     }
 }
 
@@ -431,9 +434,9 @@
             .cs-text {
                 opacity: .8;
             }
-
             .cs-hills {
-                --hillBG: var(--dark);
+                display: none;
+                
             }
         }
     }
@@ -658,6 +661,7 @@
     body.dark-mode {
         #services-1188 {
             background-color: var(--dark);
+            padding-top: 12rem;
             
             .cs-topper {
                 color: var(--primaryLight);
@@ -1150,7 +1154,7 @@
     body.dark-mode {
 
         .cs-hills {
-            --hillBG: var(--dark);
+            display: none;
          }
     }
 }
@@ -1460,12 +1464,17 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
+        
         #reviews {
             background-color: var(--dark);
+            padding-top: 12rem;
+
             .cs-review,
             .cs-name {
                 color: var(--bodyTextColorWhite);
             }
+
+
 
             .cs-job {
                 color: var(--bodyTextColorWhite);

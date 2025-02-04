@@ -1,7 +1,9 @@
+const { navigation } = require("@11ty/eleventy-navigation");
+
 // Select DOM elements
 const bodyElement = document.querySelector("body");
 const navbarMenu = document.querySelector("#cs-navigation");
-const hamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+const hamburgerMenu = document.querySelector("#cs-navigation .cs-hamburger");
 
 // Function to toggle the aria-expanded attribute
 function toggleAriaExpanded(element) {
@@ -18,7 +20,7 @@ function toggleMenu() {
 }
 
 // Add click event listener to the hamburger menu
-hamburgerMenu.addEventListener("click", toggleMenu);
+ hamburgerMenu.addEventListener("click", toggleMenu);
 
 // Add click event listener to the navbar menu to handle clicks on the pseudo-element
 navbarMenu.addEventListener("click", function (event) {
@@ -100,3 +102,4 @@ document.addEventListener("keydown", (event) => {
         toggleMenu();
     }
 });
+

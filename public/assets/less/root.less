@@ -1253,6 +1253,10 @@
           margin: auto;
           margin-bottom: (50/16rem);
           text-align: center;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+
           .logo {
               display: inline-block;
               margin: auto;
@@ -1268,23 +1272,29 @@
               }
           }
 
+          a.whatsapp-white {
+            display: none;
+          }
+
+          a.whatsapp-black {
+            display: block;
+          }
+
           p {
-              opacity: 0.9;
               margin: auto;
               width: 100%;
               font-size: (18/16rem);
               line-height: (27/14rem);
               color: var(--bodyTextColor);
               text-align: center;
-              font-family: "Inter";
+              font-family: "Roboto";
               padding-bottom: (32/16rem);
           }
 
           .image-row {
-              width: 36%;
               display: flex;
               justify-content: space-between; /* this will add equal space between each image */
-              margin-left: 32%;
+
             }
 
           
@@ -1313,7 +1323,6 @@
                       opacity: 0.9;
                       margin-bottom: (12/16rem);
                       list-style: none;
-                      font-size: (18/16rem);
                       color: var(--bodyTextColor);
 
                       a {
@@ -1387,9 +1396,7 @@
 
       .credit, .credit2 {
           margin: auto;
-
           width: 96%;
-          font-size: (16/16rem);
           line-height: (36/16rem);
           color: var(--bodyTextColor); /* Designed by text colour - light & dark mode - desktop & mobile */
           text-align: center;
@@ -1443,8 +1450,6 @@
       .left-section {
           margin: 0;
           width: 28.5625rem;
-          align-items: center;
-          flex-direction: row;
 
           .logo {
 
@@ -1460,7 +1465,6 @@
           p {
 
               text-align: center;
-              font-size: 1rem;
               padding-bottom: (35/16rem);
           }
 
@@ -1476,7 +1480,7 @@
           width: (609/16rem);
 
           .lists {
-              width: 96%;
+              width: 49%;
               flex-direction: row;
               max-width: 28.0625rem;
               text-align: left;
@@ -1542,11 +1546,37 @@
       #footer {
           background: var(--dark); /* Footer background colour - dark mode - desktop & mobile */
 
-          
+          p, a {
+
+            color: var(--bodyTextColorWhite);
+          }
+
+          .lists ul li a {
+            color: var(--bodyTextColorWhite);
+            &:hover {
+              color: var(--bodyTextColorWhite);
+            }
+          }
+
+          .lists ul li {
+            color: var(--bodyTextColorWhite);
+          }
+
+          a.whatsapp-white {
+            display: block;
+          }
+
+          a.whatsapp-black {
+            display: none;
+          }
 
           .right-section {
-            li a, h2 {
+            h2 {
             color: var(--bodyTextColorWhite);
+
+            ul li {
+              color: var(--bodyTextColorWhite);
+            }
             }
           }
 

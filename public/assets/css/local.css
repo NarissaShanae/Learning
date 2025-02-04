@@ -428,7 +428,6 @@
   }
   #services-1188 .cs-card-group {
     /* changes to 1280px at desktop */
-    max-width: 56.25rem;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -440,7 +439,6 @@
   }
   #services-1188 .cs-card-group-last {
     /* changes to 1280px at desktop */
-    max-width: 56.25rem;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -561,10 +559,6 @@
 }
 /* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
-  #services-1188 .cs-card-group,
-  #services-1188 .cs-card-group-last {
-    max-width: 80rem;
-  }
   #services-1188 .cs-item {
     max-width: none;
     padding: 2rem 1.5rem;

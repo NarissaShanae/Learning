@@ -308,6 +308,10 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 48rem) {
+  #sbs-r {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   #sbs-r .cs-image-group {
     order: 2;
   }
@@ -434,7 +438,7 @@
     display: grid;
     justify-content: center;
     gap: 1rem;
-    margin-top: -20%;
+    margin-top: -15%;
     padding-bottom: 2rem;
   }
   #services-1188 .cs-card-group-last {
@@ -445,7 +449,7 @@
     display: grid;
     justify-content: center;
     gap: 1rem;
-    margin-top: -6%;
+    margin-top: 0%;
   }
   #services-1188 a {
     text-decoration: none;
@@ -533,14 +537,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     padding-top: 0%;
-    padding-bottom: 17rem;
+    padding-bottom: 10rem;
   }
   #services-1188 .cs-card-group-last {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     padding-top: 0%;
     padding-bottom: 0rem;
-    margin-top: -20%;
+    margin-top: -15%;
   }
   #services-1188 .cs-container {
     align-items: flex-start;
@@ -558,7 +562,11 @@
   }
 }
 /* Large Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
+@media only screen and (min-width: 50rem) {
+  #services-1188 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   #services-1188 .cs-item {
     max-width: none;
     padding: 2rem 1.5rem;
@@ -926,6 +934,10 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
+  #services-1121 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   #services-1121 .cs-card-group {
     flex-direction: row;
     justify-content: space-between;
@@ -940,9 +952,6 @@
     display: flex;
     flex-direction: row;
     column-gap: 2rem;
-  }
-  #services-1121 .cs-flex {
-    align-items: start;
   }
 }
 /* Small Desktop - 1024px */

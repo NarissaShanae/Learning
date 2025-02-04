@@ -28,7 +28,7 @@
     position: relative;
     z-index: 1;
     padding-top: 11rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
   }
   #hero-856 .cs-container {
     width: 100%;
@@ -39,6 +39,7 @@
     align-items: center;
     flex-direction: column;
     gap: 0.625rem;
+    padding-bottom: 1.5rem;
   }
   #hero-856 .cs-content {
     max-width: 39.375rem;
@@ -145,6 +146,7 @@
     justify-content: space-between;
     padding-block-end: 0rem;
     margin-top: 2rem;
+    padding-bottom: 0rem;
   }
   #hero-856 .cs-content {
     width: 45vw;

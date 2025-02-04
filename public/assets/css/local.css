@@ -309,8 +309,14 @@
   #sbs-r .cs-content {
     width: 70%;
   }
+  #sbs-r .cs-picture {
+    width: 100%;
+  }
   #sbs .cs-content {
     width: 47%;
+  }
+  #sbs .cs-picture {
+    width: 90%;
   }
   #sbs,
   #sbs-r {
@@ -339,7 +345,6 @@
   #sbs .cs-picture,
   #sbs-r .cs-picture {
     height: 30rem;
-    width: 90%;
   }
   #sbs .cs-text,
   #sbs-r .cs-text {
@@ -872,6 +877,11 @@
     /* prevents flexbox from squishing it */
     flex: none;
   }
+  #services-1121 .cs-flex {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
   #services-1121 .cs-icon {
     /* 36px - 48px */
     width: clamp(2.25rem, 4vw, 3rem);
@@ -901,6 +911,7 @@
     text-align: inherit;
     margin: 0;
     color: var(--bodyTextColorWhite);
+    max-width: 80%;
   }
 }
 /* Tablet - 768px */
@@ -919,6 +930,9 @@
     display: flex;
     flex-direction: row;
     column-gap: 2rem;
+  }
+  #services-1121 .cs-flex {
+    align-items: start;
   }
 }
 /* Small Desktop - 1024px */
@@ -1103,6 +1117,13 @@
     flex: none;
     aspect-ratio: initial;
   }
+  #reviews-306 .cs-title {
+    max-width: 100%;
+    padding-left: 3rem;
+  }
+  #reviews-306 .cs-topper {
+    padding-left: 3rem;
+  }
   #reviews-306 .cs-picture-group {
     flex-direction: row;
     order: 2;
@@ -1110,11 +1131,16 @@
   #reviews-306 .cs-content {
     /* 76px - 128px */
     padding-left: clamp(4.75rem, 10vw, 8rem);
-    padding-right: 2rem;
+    padding-right: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   #reviews-306 .cs-content1 {
     margin-left: 50%;
     margin-bottom: 0rem;
+  }
+  #reviews-306 .cs-info {
+    padding-bottom: 1rem;
   }
   #reviews-306 .cs-watermark {
     /* 16px - 175px */

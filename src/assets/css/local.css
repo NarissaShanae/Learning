@@ -372,6 +372,16 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #sbs {
+    background-color: #1a1a1a;
+  }
+  body.dark-mode #sbs-r {
+    margin-top: -2rem;
+  }
+  body.dark-mode #sbs,
+  body.dark-mode #sbs-r {
+    padding-bottom: 4rem;
+  }
   body.dark-mode #sbs .cs-title,
   body.dark-mode #sbs-r .cs-title,
   body.dark-mode #sbs .cs-text,
@@ -576,7 +586,7 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode #services-1188 {
     background-color: var(--dark);
-    padding-top: 12rem;
+    padding-top: 4rem;
   }
   body.dark-mode #services-1188 .cs-topper {
     color: var(--primaryLight);
@@ -1244,8 +1254,8 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #reviews {
-    background-color: var(--dark);
-    padding-top: 12rem;
+    background-color: #1a1a1a;
+    padding-top: 4rem;
   }
   body.dark-mode #reviews .cs-review,
   body.dark-mode #reviews .cs-name {
@@ -1277,5 +1287,10 @@
     bottom: 0;
     right: 1.25rem;
     display: block;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  body.dark-mode #reviews {
+    margin-top: 0%;
   }
 }

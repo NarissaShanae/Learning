@@ -425,7 +425,19 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
+
+        #sbs {
+            background-color: #1a1a1a;
+        }
+        
+
+        #sbs-r {
+            margin-top: -2rem;
+
+        }
+
         #sbs, #sbs-r {
+            padding-bottom: 4rem;
             .cs-title, .cs-text, .cs-li {
                 color: var(--bodyTextColorWhite);
             }
@@ -661,7 +673,7 @@
     body.dark-mode {
         #services-1188 {
             background-color: var(--dark);
-            padding-top: 12rem;
+            padding-top: 4rem;
             
             .cs-topper {
                 color: var(--primaryLight);
@@ -690,6 +702,7 @@
         }
     }
 }
+
 
                                 
 
@@ -1463,8 +1476,8 @@
     body.dark-mode {
         
         #reviews {
-            background-color: var(--dark);
-            padding-top: 12rem;
+            background-color: #1a1a1a;
+            padding-top: 4rem;
 
             .cs-review,
             .cs-name {
@@ -1507,4 +1520,12 @@
     }
 }
 
-                                
+@media only screen and (min-width: 48rem) {
+    body.dark-mode {
+        
+        #reviews {
+            
+            margin-top: 0%;
+        }
+    }
+}
